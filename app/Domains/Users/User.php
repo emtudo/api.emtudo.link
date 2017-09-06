@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace Emtudo\Domains\Users;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;

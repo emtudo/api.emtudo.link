@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\Auth;
+namespace Emtudo\Units\Http\Controllers\Auth;
 
-use App\Http\Controllers\Controller;
+use Emtudo\Units\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
 
 class ResetPasswordController extends Controller
