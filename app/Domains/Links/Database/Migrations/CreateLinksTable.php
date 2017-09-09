@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
+namespace Emtudo\Domains\Links\Database\Migrations;
+
+use Emtudo\Support\Database\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
 class CreateLinksTable extends Migration
 {
@@ -13,7 +14,7 @@ class CreateLinksTable extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        $this->schema->create('links', function (Blueprint $table) {
             $table->increments('id');
             $table->unsingnedInteger('user_id');
             $table->string('url');
@@ -29,6 +30,6 @@ class CreateLinksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('links');
+        $this->schema->dropIfExists('links');
     }
 }

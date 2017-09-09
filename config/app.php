@@ -167,6 +167,8 @@ return [
         /*
          * Package Service Providers...
          */
+         
+          Migrator\MigrationServiceProvider::class,
 
         /*
          * Application Service Providers...

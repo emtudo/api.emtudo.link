@@ -1,8 +1,9 @@
 <?php
 
-use Illuminate\Support\Facades\Schema;
+namespace Emtudo\Domains\Users\Database\Migrations;
+
+use Emtudo\Support\Database\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Database\Migrations\Migration;
 
 class CreateUsersTable extends Migration
 {
