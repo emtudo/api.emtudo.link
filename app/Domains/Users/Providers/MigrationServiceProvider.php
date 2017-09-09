@@ -1,10 +1,10 @@
 <?php
 
-namespace Emtudo\Domains\Usres\Providers;
+namespace Emtudo\Domains\Users\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Migrator\MigratorTrait;
-use Emtudo\Domains\Usres\Database\Migrations;
+use Emtudo\Domains\Users\Database\Migrations;
 
 class MigrationServiceProvider extends ServiceProvider
 {

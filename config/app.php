@@ -178,6 +178,10 @@ return [
         // Emtudo\Units\Providers\BroadcastServiceProvider::class,
         Emtudo\Units\Providers\EventServiceProvider::class,
         Emtudo\Units\Providers\RouteServiceProvider::class,
+        
+        // Domains
+        Emtudo\Domains\Users\Providers\MigrationServiceProvider::class,
+        Emtudo\Domains\Links\Providers\MigrationServiceProvider::class,
 
     ],
 

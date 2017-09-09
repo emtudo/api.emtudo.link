@@ -16,7 +16,7 @@ class CreateLinksTable extends Migration
     {
         $this->schema->create('links', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsingnedInteger('user_id');
+            $table->unsignedInteger('user_id');
             $table->string('url');
             $table->string('slug')->nullable();
             $table->timestamps();

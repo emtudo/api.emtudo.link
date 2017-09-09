@@ -4,7 +4,7 @@ namespace Emtudo\Support\Database;
 
 use Illuminate\Database\Migrations\Migration as BaseMigration;
 
-abstract class Migrations extends BaseMigration
+abstract class Migration extends BaseMigration
 {
     /**
      * @var \Illuminate\Database\Schema\Builder
