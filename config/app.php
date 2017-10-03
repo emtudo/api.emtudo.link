@@ -177,11 +177,14 @@ return [
         Emtudo\Units\Providers\AuthServiceProvider::class,
         // Emtudo\Units\Providers\BroadcastServiceProvider::class,
         Emtudo\Units\Providers\EventServiceProvider::class,
-        Emtudo\Units\Providers\RouteServiceProvider::class,
         
         // Domains
         Emtudo\Domains\Users\Providers\MigrationServiceProvider::class,
         Emtudo\Domains\Links\Providers\MigrationServiceProvider::class,
+
+        // Units
+        Emtudo\Units\Links\Providers\RouteServiceProvider::class,
+        Emtudo\Units\Users\Providers\RouteServiceProvider::class,
 
     ],
 

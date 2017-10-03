@@ -1,10 +1,10 @@
 <?php
 
-namespace Emtudo\Units\Http;
+namespace Emtudo\Units;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
-class Kernel extends HttpKernel
+class HttpKernel extends HttpKernel
 {
     /**
      * The application's global HTTP middleware stack.
