@@ -1,8 +1,8 @@
 <?php
 
-namespace Emtudo\Units\Http\Controllers\Auth;
+namespace Emtudo\Units\Auth\Http\Controllers;
 
-use Emtudo\Units\Http\Controllers\Controller;
+use Emtudo\Support\Http\Controller;
 use Illuminate\Foundation\Auth\SendsPasswordResetEmails;
 
 class ForgotPasswordController extends Controller

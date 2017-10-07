@@ -1,6 +1,6 @@
 <?php
 
-namespace Emtudo\Units\Http\Controllers;
+namespace Emtudo\Support\Http;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Routing\Controller as BaseController;

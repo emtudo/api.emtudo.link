@@ -18,7 +18,7 @@ class HttpKernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \Emtudo\Units\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \Emtudo\Units\Http\Middleware\TrustProxies::class,
+        \Emtudo\Units\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -28,12 +28,12 @@ class HttpKernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \Emtudo\Units\Http\Middleware\EncryptCookies::class,
+            \Emtudo\Units\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Emtudo\Units\Http\Middleware\VerifyCsrfToken::class,
+            \Emtudo\Units\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 
@@ -55,7 +55,7 @@ class HttpKernel extends HttpKernel
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'bindings' => \Illuminate\Routing\Middleware\SubstituteBindings::class,
         'can' => \Illuminate\Auth\Middleware\Authorize::class,
-        'guest' => \Emtudo\Units\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \Emtudo\Units\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
     ];
 }

@@ -7,8 +7,6 @@ class Api extends RouteFile
 {
     public function routes()
     {
-       $this->router->get('/links', function () {
-          return 'links';
-       });
+       $this->router->apiResource('/links', 'LinkController');
     }
 }

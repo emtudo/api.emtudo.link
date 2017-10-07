@@ -1,9 +1,9 @@
 <?php
 
-namespace Emtudo\Units\Http\Controllers\Auth;
+namespace Emtudo\Units\Auth\Http\Controllers;
 
 use Emtudo\Units\User;
-use Emtudo\Units\Http\Controllers\Controller;
+use Emtudo\Support\Http\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
