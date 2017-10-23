@@ -173,10 +173,10 @@ return [
         /*
          * Application Service Providers...
          */
-        Emtudo\Units\Providers\AppServiceProvider::class,
-        Emtudo\Units\Providers\AuthServiceProvider::class,
-        // Emtudo\Units\Providers\BroadcastServiceProvider::class,
-        Emtudo\Units\Providers\EventServiceProvider::class,
+        Emtudo\Units\Core\Providers\AppServiceProvider::class,
+        Emtudo\Units\Core\Providers\AuthServiceProvider::class,
+        // Emtudo\Units\Core\Providers\BroadcastServiceProvider::class,
+        Emtudo\Units\Core\Providers\EventServiceProvider::class,
         
         // Domains
         Emtudo\Domains\Users\Providers\MigrationServiceProvider::class,

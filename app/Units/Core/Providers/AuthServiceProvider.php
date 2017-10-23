@@ -1,6 +1,6 @@
 <?php
 
-namespace Emtudo\Units\Providers;
+namespace Emtudo\Units\Core\Providers;
 
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;

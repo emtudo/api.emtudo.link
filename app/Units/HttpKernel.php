@@ -2,9 +2,9 @@
 
 namespace Emtudo\Units;
 
-use Illuminate\Foundation\Http\Kernel as HttpKernel;
+use Illuminate\Foundation\Http\Kernel;
 
-class HttpKernel extends HttpKernel
+class HttpKernel extends Kernel
 {
     /**
      * The application's global HTTP middleware stack.
@@ -16,9 +16,9 @@ class HttpKernel extends HttpKernel
     protected $middleware = [
         \Illuminate\Foundation\Http\Middleware\CheckForMaintenanceMode::class,
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
-        \Emtudo\Units\Http\Middleware\TrimStrings::class,
+        \Emtudo\Units\Core\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
-        \Emtudo\Units\Middleware\TrustProxies::class,
+        \Emtudo\Units\Core\Middleware\TrustProxies::class,
     ];
 
     /**
@@ -28,12 +28,11 @@ class HttpKernel extends HttpKernel
      */
     protected $middlewareGroups = [
         'web' => [
-            \Emtudo\Units\Middleware\EncryptCookies::class,
             \Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse::class,
             \Illuminate\Session\Middleware\StartSession::class,
             // \Illuminate\Session\Middleware\AuthenticateSession::class,
             \Illuminate\View\Middleware\ShareErrorsFromSession::class,
-            \Emtudo\Units\Middleware\VerifyCsrfToken::class,
+            \Emtudo\Units\Core\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
 

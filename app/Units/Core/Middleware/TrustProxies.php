@@ -1,6 +1,6 @@
 <?php
 
-namespace Emtudo\Units\Http\Middleware;
+namespace Emtudo\Units\Core\Middleware;
 
 use Illuminate\Http\Request;
 use Fideloper\Proxy\TrustProxies as Middleware;

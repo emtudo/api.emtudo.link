@@ -1,6 +1,6 @@
 <?php
 
-namespace Emtudo\Units\Providers;
+namespace Emtudo\Units\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\Broadcast;

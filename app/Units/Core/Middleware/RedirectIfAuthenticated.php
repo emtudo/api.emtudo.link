@@ -1,6 +1,6 @@
 <?php
 
-namespace Emtudo\Units\Http\Middleware;
+namespace Emtudo\Units\Core\Middleware;
 
 use Closure;
 use Illuminate\Support\Facades\Auth;
