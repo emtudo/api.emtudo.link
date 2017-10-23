@@ -13,9 +13,11 @@ class UserController extends Controller
     {
         return User::all();
     }
-    
-    public function store(CreateUserRequest $request)
+
+    public function store(CreateUserRequest $request, User $user)
     {
-        return $request->all();
+        $newUser = $user->create($request->all());
+
+        return $newUser;
     }
 }

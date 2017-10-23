@@ -16,6 +16,11 @@ class LinkController extends Controller
     
     public function store(CreateLinkRequest $request)
     {
-        return $request->all();
+        $link = new Link;
+        $link->fill($request->all());
+        $link->user_id = 1;
+        $link->save();        
+
+        return $link;
     }
 }
