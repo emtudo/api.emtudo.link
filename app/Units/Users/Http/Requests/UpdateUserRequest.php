@@ -4,7 +4,7 @@ namespace Emtudo\Units\Users\Http\Requests;
 
 use Emtudo\Support\Http\Request;
 
-class CreateUserRequest extends Request
+class UpdateUserRequest extends Request
 {
     /**
      * Get the validation rules that apply to the request.

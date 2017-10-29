@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Emtudo\Support\Http\Controller;
 use Emtudo\Units\Links\Http\Requests\CreateLinkRequest;
 use Emtudo\Domains\Links\Link;
+use Emtudo\Domains\Links\Repositories\LinkRepostiory;
 
 class LinkController extends Controller
 {
@@ -14,13 +15,15 @@ class LinkController extends Controller
         return Link::all();
     }
     
-    public function store(CreateLinkRequest $request)
+    public function store(CreateLinkRequest $request, LinkRepostiory $repository)
     {
-        $link = new Link;
-        $link->fill($request->all());
-        $link->user_id = 1;
-        $link->save();        
+        $data = $request->all();
+        $link = $repository->create($data);
 
-        return $link;
+        if ($link) {
+            return response()->json($link);
+        }
+        
+        return response()->json('Falha', 422);
     }
 }
