@@ -30,7 +30,7 @@ class RouteServiceProvider extends ServiceProvider
     public function map()
     {
         (new Api([
-            'middleware' => ['api,auth:api'],
+            'middleware' => ['api'],
             'namespace'  => $this->namespace,
         ]))->register();
     }

@@ -1,9 +1,11 @@
 <?php 
 
-namespace Emtudo\Domains\Users\Repositories;
+namespace Emtudo\Domains\Links\Repositories;
 
 use Emtudo\Support\Domain\Repository;
+use Emtudo\Domains\Links\Link;
 
-class LinkRepostiory extends Repository
+class LinkRepository extends Repository
 {
+    protected $modelClass = Link::class;
 }
