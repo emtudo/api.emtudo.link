@@ -1,7 +1,6 @@
 <?php
 
 return [
-
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -137,10 +136,7 @@ return [
     */
 
     'providers' => [
-
-        /*
-         * Laravel Framework Service Providers...
-         */
+        // Laravel Framework Service Providers...
         Illuminate\Auth\AuthServiceProvider::class,
         Illuminate\Broadcasting\BroadcastServiceProvider::class,
         Illuminate\Bus\BusServiceProvider::class,
@@ -164,28 +160,24 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
-        /*
-         * Package Service Providers...
-         */
-         
+        // Package Service Providers...
+
           Migrator\MigrationServiceProvider::class,
 
-        /*
-         * Application Service Providers...
-         */
+        // Application Service Providers...
         Emtudo\Units\Core\Providers\AppServiceProvider::class,
         Emtudo\Units\Core\Providers\AuthServiceProvider::class,
         // Emtudo\Units\Core\Providers\BroadcastServiceProvider::class,
         Emtudo\Units\Core\Providers\EventServiceProvider::class,
-        
+
         // Domains
         Emtudo\Domains\Users\Providers\MigrationServiceProvider::class,
         Emtudo\Domains\Links\Providers\MigrationServiceProvider::class,
 
         // Units
+        Emtudo\Units\Auth\Providers\RouteServiceProvider::class,
         Emtudo\Units\Links\Providers\RouteServiceProvider::class,
         Emtudo\Units\Users\Providers\RouteServiceProvider::class,
-
     ],
 
     /*
@@ -200,7 +192,6 @@ return [
     */
 
     'aliases' => [
-
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -234,7 +225,5 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-
     ],
-
 ];
