@@ -2,9 +2,9 @@
 
 namespace Emtudo\Support\Http;
 
+use Illuminate\Contracts\Validation\Validator;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\ValidationException;
-use Illuminate\Contracts\Validation\Validator;
 
 abstract class Request extends FormRequest
 {
@@ -21,8 +21,7 @@ abstract class Request extends FormRequest
     /**
      * Handle a failed validation attempt.
      *
-     * @param  \Illuminate\Contracts\Validation\Validator  $validator
-     * @return void
+     * @param \Illuminate\Contracts\Validation\Validator $validator
      *
      * @throws \Illuminate\Validation\ValidationException
      */
@@ -30,8 +29,9 @@ abstract class Request extends FormRequest
     {
         $errors = $validator->errors()->toArray();
 
-        throw (new ValidationException($validator,
+        throw (new ValidationException(
+            $validator,
             response()->json($errors, 422)
-          ));
+        ));
     }
 }

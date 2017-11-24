@@ -40,4 +40,9 @@ class User extends Model implements AuthenticatableContract, AuthorizableContrac
             'name' => $this->name,
         ];
     }
+
+    public function setPasswordAttribute($value)
+    {
+        $this->attributes['password'] = bcrypt($value);
+    }
 }

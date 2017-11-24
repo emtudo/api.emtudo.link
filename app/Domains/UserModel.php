@@ -8,13 +8,13 @@ abstract class UserModel extends Model
     {
         parent::boot();
 
-        self::saving(function($model) {
-          if (empty($model->user_id)) {
-            $model->setUser();
-          }
+        self::saving(function ($model) {
+            if (empty($model->user_id)) {
+                $model->setUser();
+            }
         });
     }
-    
+
     public function setUser()
     {
         $user = auth()->user();

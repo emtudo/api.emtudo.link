@@ -1,9 +1,9 @@
-<?php 
+<?php
 
 namespace Emtudo\Domains\Users\Repositories;
 
-use Emtudo\Support\Domain\Repository;
 use Emtudo\Domains\Users\User;
+use Emtudo\Support\Domain\Repository;
 
 class UserRepository extends Repository
 {
@@ -13,9 +13,9 @@ class UserRepository extends Repository
     {
         $newData = $data;
         if (isset($newData['password'])) {
-            $newData['password'] = bcrypt($newData['password']);
+            $newData['password'] = $newData['password'];
         }
-        
+
         return parent::create($newData);
     }
 
@@ -23,7 +23,7 @@ class UserRepository extends Repository
     {
         $newData = $data;
         if (isset($newData['password'])) {
-            $newData['password'] = bcrypt($newData['password']);
+            $newData['password'] = $newData['password'];
         }
 
         return parent::update($model, $newData);

@@ -8,6 +8,8 @@ class Api extends RouteFile
 {
     public function routes()
     {
-        $this->router->apiResource('/users', 'UserController');
+        $this->router->get('/users/{user}', 'UserController@show');
+        $this->router->post('/users', 'UserController@store');
+        $this->router->put('/users/{user}', 'UserController@update');
     }
 }
